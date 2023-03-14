@@ -1,0 +1,83 @@
+{
+  "item.sillymod1.raw_marioite": "Raw Marioite",
+  "item.sillymod1.marioite": "Marioite (Yahoo!)",
+  "block.sillymod1.marioite_block": "Block of Marioite",
+  "block.sillymod1.raw_marioite_block": "Block of Raw Marioite",
+  "block.sillymod1.marioite_ore": "Marioite Ore",
+  "block.sillymod1.deepslate_marioite_ore": "Deepslate Marioite Ore",
+
+  "item.sillymod1.raw_luigite": "Raw Luigite",
+  "item.sillymod1.luigite": "Luigite",
+  "block.sillymod1.luigite_block": "Block of Luigite",
+  "block.sillymod1.raw_luigite_block": "Block of Raw Luigite",
+  "block.sillymod1.luigite_ore": "Luigite Ore",
+  "block.sillymod1.deepslate_luigite_ore": "Deepslate Luigite Ore",
+
+  "item.sillymod1.raw_trollium": "Raw Trollium",
+  "item.sillymod1.trollium": "Trollium",
+  "block.sillymod1.trollium_block": "Block of Trollium",
+  "block.sillymod1.raw_trollium_block": "Block of Raw Trollium",
+  "block.sillymod1.trollium_ore": "Trollium Ore",
+  "block.sillymod1.deepslate_trollium_ore": "Deepslate Trollium Ore",
+
+  "block.sillymod1.did_you_know_block": "Did You Know Block",
+  "block.sillymod1.lego": "Lego",
+  "block.sillymod1.cursed_door": "Cursed Door",
+  "block.sillymod1.troll_grass": "Troll Grass",
+
+  "item.sillymod1.gold_shield": "Gold Shield",
+  "item.sillymod1.incorrect_parrot": "Incorrect Parrot Usage",
+  "item.sillymod1.pubg_phone": "Phone With PUBG Installed",
+  "item.sillymod1.coal_sword": "Coal Sword",
+  "item.sillymod1.real_hand": "Hyper-Realistic Hand",
+  "item.sillymod1.forget_stick": "The Forget-Me Stick",
+  "item.sillymod1.emerald_blade": "Emerald Sword Blade",
+  "item.sillymod1.emerald_sword": "Emerald Sword",
+  "item.sillymod1.fire_flower": "Fire Flower",
+  "item.sillymod1.funny_cannon": "Funny Looking Cannon",
+  "item.sillymod1.naughtigen_cannon": "Nahtigen Launcher",
+  "item.sillymod1.troll_egg": "Troll Egg",
+  "item.sillymod1.pocket_greentop": "Pocket Greentop",
+  "item.sillymod1.pocket_gravel_pit": "Pocket Gravel Pit",
+  "item.sillymod1.vaccuum": "Vaccuum Cleaner",
+  "item.sillymod1.troll_helmet": "Troll Helmet",
+  "item.sillymod1.gooigi_bucket": "Gooigi Bucket",
+  "item.sillymod1.marinara_bucket": "Marinara Bucket",
+  "item.sillymod1.ghast_cannon": "Ghast Cannon",
+  "item.sillymod1.metal_mario_cap": "Metal Mario Cap",
+  "item.sillymod1.ultra_pick": "Ultra Pick",
+  "item.sillymod1.coal_axe": "Coal Axe",
+  "item.sillymod1.wildcard_pick": "Wildcard Pick",
+  "item.sillymod1.freddy_mask": "Freddy Mask",
+  "item.sillymod1.clarinet": "Squidward Clarinet",
+
+  "item.sillymod1.iron_apple": "Iron Apple",
+  "item.sillymod1.perc_thirty": "Perc 30",
+  "item.sillymod1.roast_fire_flower": "Roasted Fire Flower",
+  "item.sillymod1.decaying_flesh": "Decaying Flesh",
+  "item.sillymod1.sauced_spaghetti": "Spaghetti With Sauce",
+  "item.sillymod1.spaghetti": "Spaghetti",
+
+  "item.sillymod1.terraria_sword": "Terraria Shortsword",
+  "item.sillymod1.terraria_broadsword": "Terraria Broadsword",
+  "item.sillymod1.terraria_axe": "Terraria Axe",
+  "item.sillymod1.terraria_pickaxe": "Terraria Pickaxe",
+
+  "item.sillymod1.brain": "Cranium",
+
+  "item.sillymod1.incompetent_spawn_egg": "Incompetent Creeper Spawn Egg",
+  "item.sillymod1.trollface_spawn_egg": "Trollface Spawn Egg",
+
+  "itemGroup.sillymod1.marioite": "Marioite Tab",
+  "itemGroup.sillymod1.silly_tools": "Silly Tools Tab",
+
+  "effect.sillymod1.perced": "On that perc???",
+  "effect.sillymod1.einstein": "Einstein",
+  "effect.sillymod1.fire_trail": "Fire Trail",
+  "effect.sillymod1.freddied": "Freddied",
+  "effect.sillymod1.oiled": "Covered In Oil",
+
+  "item.minecraft.potion.effect.einstein": "Einstein Potion",
+
+  "entity.sillymod1.husk_slave": "Husk"
+}

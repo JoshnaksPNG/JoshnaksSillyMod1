@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:spider_eye"
+    }
+  ],
+  "result":
+  {
+    "item": "sillymod1:perc_thirty"
+  }
+}

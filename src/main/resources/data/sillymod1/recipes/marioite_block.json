@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "###",
+    "###",
+    "###"
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "sillymod1:marioite"
+    }
+  },
+  "result":
+  {
+    "item": "sillymod1:marioite_block"
+  }
+}

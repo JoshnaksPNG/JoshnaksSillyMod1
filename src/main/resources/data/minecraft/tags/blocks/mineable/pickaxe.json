@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values":
+  [
+    "sillymod1:marioite_block",
+    "sillymod1:raw_marioite_block",
+    "sillymod1:marioite_ore",
+    "sillymod1:deepslate_marioite_ore",
+    "sillymod1:luigite_block",
+    "sillymod1:raw_luigite_block",
+    "sillymod1:luigite_ore",
+    "sillymod1:deepslate_luigite_ore"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "#"
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "sillymod1:raw_luigite_block"
+    }
+  },
+  "result":
+  {
+    "item": "sillymod1:raw_luigite",
+    "count": 9
+  }
+}

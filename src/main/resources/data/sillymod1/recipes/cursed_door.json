@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "###",
+    "#/#",
+    "###"
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "sillymod1:trollium"
+    },
+    "/":
+    [
+      {
+        "item": "minecraft:oak_door"
+      },
+      {
+        "item": "minecraft:dark_oak_door"
+      },
+      {
+        "item": "minecraft:birch_door"
+      },
+      {
+        "item": "minecraft:acacia_door"
+      },
+      {
+        "item": "minecraft:spruce_door"
+      },
+      {
+        "item": "minecraft:jungle_door"
+      },
+      {
+        "item": "minecraft:mangrove_door"
+      },
+      {
+        "item": "minecraft:crimson_door"
+      },
+      {
+        "item": "minecraft:warped_door"
+      }
+    ]
+  },
+  "result":
+  {
+    "item": "sillymod1:cursed_door"
+  }
+}

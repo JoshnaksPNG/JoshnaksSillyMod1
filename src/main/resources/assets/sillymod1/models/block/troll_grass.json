@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "sillymod1:block/troll_grass_top",
+    "side": "sillymod1:block/troll_grass_side"
+  }
+}

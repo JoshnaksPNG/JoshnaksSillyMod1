@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:blasting",
+    "cookingtime": 100,
+    "experience": 0.7,
+    "group": "marioite",
+    "ingredient":
+    {
+        "item": "sillymod1:raw_luigite"
+    },
+    "result": "sillymod1:luigite"
+}

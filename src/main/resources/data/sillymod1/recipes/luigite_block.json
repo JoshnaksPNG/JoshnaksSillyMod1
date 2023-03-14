@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "###",
+    "###",
+    "###"
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "sillymod1:luigite"
+    }
+  },
+  "result":
+  {
+    "item": "sillymod1:luigite_block"
+  }
+}
