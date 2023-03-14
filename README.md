@@ -1,9 +1,5 @@
-# Fabric Example Mod
+# Joshnaks Silly Mod
 
-## Setup
+## Notice
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This project is under construction! Please check back in a few weeks.
