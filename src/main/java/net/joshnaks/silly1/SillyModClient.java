@@ -22,6 +22,7 @@ public class SillyModClient implements ClientModInitializer
     public static final EntityModelLayer MODEL_CREEPER_LAYER = new EntityModelLayer(new Identifier(SillyMod1.MOD_ID, "incompetent_creeper"), "main");
     public static final EntityModelLayer MODEL_VILLAGER_LAYER = new EntityModelLayer(new Identifier(SillyMod1.MOD_ID, "cursed_villager"), "main");
     public static final EntityModelLayer MODEL_HUSK_SLAVE_LAYER = new EntityModelLayer(new Identifier(SillyMod1.MOD_ID, "husk_slave"), "main");
+    public static final EntityModelLayer MODEL_PIGLIN_SLAVE_LAYER = new EntityModelLayer(new Identifier(SillyMod1.MOD_ID, "piglin_slave"), "main");
 
 
     @Override
@@ -50,6 +51,11 @@ public class SillyModClient implements ClientModInitializer
         EntityRendererRegistry.register(ModEntities.HUSK_SLAVE, (ctx ->
         {
             return new HuskSlaveRenderer(ctx);
+        }));
+
+        EntityRendererRegistry.register(ModEntities.PIGLIN_SLAVE, (ctx ->
+        {
+            return new PiglinSlaveRenderer(ctx);
         }));
 
         FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_GOOIGI, ModFluids.FLOWING_GOOIGI,

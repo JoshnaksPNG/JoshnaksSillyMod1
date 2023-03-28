@@ -130,6 +130,9 @@ public class ModItems
     public static final Item Clarinet = registerItem("clarinet",
             new ClarinetItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
+    public static final Item Scepter = registerItem("scepter",
+            new ScepterItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+
     // Silly Food
     public static final Item Iron_Apple = registerItem("iron_apple",
             new Item(new Item.Settings().food(ModFoodComponents.IRON_APPLE)), ModItemGroup.SILLY_FOOD);

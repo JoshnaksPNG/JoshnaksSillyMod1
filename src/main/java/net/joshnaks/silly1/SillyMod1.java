@@ -15,6 +15,7 @@ import net.joshnaks.silly1.potion.ModPotions;
 import net.joshnaks.silly1.sounds.ModSoundEvents;
 import net.joshnaks.silly1.util.ModLootTableModifiers;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -23,9 +24,9 @@ import software.bernie.geckolib.GeckoLib;
 
 public class SillyMod1 implements ModInitializer {
 	public static final String MOD_ID = "sillymod1";
-	/*public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final Identifier LEBRON_ID = new Identifier("sillymod1:lebron");
+	/*public static final Identifier LEBRON_ID = new Identifier("sillymod1:lebron");
 	public static SoundEvent LEBRON_EVENT = SoundEvent.of(LEBRON_ID);*/
 
 
@@ -36,6 +37,7 @@ public class SillyMod1 implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.TROLLFACE, TrollfaceEntity.setAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.TINY_MARIO, TinyMarioEntity.createWolfAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.HUSK_SLAVE, HuskSlaveEntity.createZombieAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.PIGLIN_SLAVE, PiglinSlaveEntity.createMobAttributes());
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CURSED_DOOR, RenderLayer.getCutout());
 
