@@ -2,4 +2,4 @@
 
 ## Notice
 
-This project is under construction! Please check back in a few weeks.
+This Mod is unfinished.
