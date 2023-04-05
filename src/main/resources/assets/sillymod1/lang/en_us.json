@@ -68,6 +68,16 @@
   "item.sillymod1.incompetent_spawn_egg": "Incompetent Creeper Spawn Egg",
   "item.sillymod1.trollface_spawn_egg": "Trollface Spawn Egg",
 
+  "item.sillymod1.marioite_helmet": "Marioite Helmet",
+  "item.sillymod1.marioite_chestplate": "Marioite Chestplate",
+  "item.sillymod1.marioite_leggings": "Marioite Leggings",
+  "item.sillymod1.marioite_boots": "Marioite Boots",
+
+  "item.sillymod1.luigite_helmet": "Luigite Helmet",
+  "item.sillymod1.luigite_chestplate": "Luigite Chestplate",
+  "item.sillymod1.luigite_leggings": "Luigite Leggings",
+  "item.sillymod1.luigite_boots": "Luigite Boots",
+
   "itemGroup.sillymod1.marioite": "Marioite Tab",
   "itemGroup.sillymod1.silly_tools": "Silly Tools Tab",
 

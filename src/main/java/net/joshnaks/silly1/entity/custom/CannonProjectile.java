@@ -6,6 +6,7 @@ import net.joshnaks.silly1.entity.ModEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -26,15 +27,20 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.*;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.BlockLocating;
 import net.minecraft.world.RaycastContext;
+import net.minecraft.world.TeleportTarget;
 import net.minecraft.world.World;
+import net.minecraft.world.border.WorldBorder;
+import net.minecraft.world.chunk.Chunk;
+import net.minecraft.world.chunk.WorldChunk;
+import net.minecraft.world.dimension.DimensionType;
+import net.minecraft.world.dimension.NetherPortal;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -42,6 +48,8 @@ import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.Iterator;
+import java.util.Optional;
+import java.util.function.BooleanSupplier;
 
 public class CannonProjectile extends ProjectileEntity implements GeoEntity
 {
@@ -96,18 +104,28 @@ public class CannonProjectile extends ProjectileEntity implements GeoEntity
             ServerWorld serverWorld2 = minecraftServer.getWorld(registryKey);
             if(serverWorld2 != null && minecraftServer.isNetherAllowed())
             {
+                Chunk chunk = serverWorld2.getChunk(livingEntity.getBlockPos());
+                //serverWorld2.tickChunk( (WorldChunk) chunk, 1);
+                livingEntity.world.getProfiler().push("portal");
 
-                serverWorld.getProfiler().push("portal");
+                livingEntity.resetPortalCooldown();
+                moveToWorld(serverWorld2, livingEntity);
+
+
+
+
+                livingEntity.world.getProfiler().pop();
+                //serverWorld.getProfiler().push("portal");
 
                 //entity.setPos(0, 0, 0);
                 //serverWorld2.;
-                livingEntity.moveToWorld(serverWorld2);
-                serverWorld.getProfiler().pop();
+                //livingEntity.moveToWorld(serverWorld2);
+                //serverWorld.getProfiler().pop();
 
                 // Remove Portal Blocks here
-                BlockPos npos = livingEntity.getBlockPos();
+                //BlockPos npos = livingEntity.getBlockPos();
 
-                clearPortal(npos.getX(), npos.getY(), npos.getZ(), livingEntity.world);
+                //clearPortal(npos.getX(), npos.getY(), npos.getZ(), livingEntity.world);
             }
 
             this.discard();
@@ -247,8 +265,8 @@ public class CannonProjectile extends ProjectileEntity implements GeoEntity
             Vec3d vec3d3 = this.getPos();
             vec3d2 = vec3d3.add(vec3d);
             HitResult hitResult = this.world.raycast(new RaycastContext(vec3d3, vec3d2, RaycastContext.ShapeType.COLLIDER, RaycastContext.FluidHandling.NONE, this));
-            if (((HitResult)hitResult).getType() != HitResult.Type.MISS) {
-                vec3d2 = ((HitResult)hitResult).getPos();
+            if ((hitResult).getType() != HitResult.Type.MISS) {
+                vec3d2 = (hitResult).getPos();
             }
 
             while(!this.isRemoved()) {
@@ -257,7 +275,7 @@ public class CannonProjectile extends ProjectileEntity implements GeoEntity
                     hitResult = entityHitResult;
                 }
 
-                if (hitResult != null && ((HitResult)hitResult).getType() == HitResult.Type.ENTITY) {
+                if (hitResult != null && (hitResult).getType() == HitResult.Type.ENTITY) {
                     Entity entity = ((EntityHitResult)hitResult).getEntity();
                     Entity entity2 = this.getOwner();
                     if (entity instanceof PlayerEntity && entity2 instanceof PlayerEntity && !((PlayerEntity)entity2).shouldDamagePlayer((PlayerEntity)entity)) {
@@ -326,5 +344,85 @@ public class CannonProjectile extends ProjectileEntity implements GeoEntity
     static {
         PROJECTILE_FLAGS = DataTracker.registerData(PersistentProjectileEntity.class, TrackedDataHandlerRegistry.BYTE);
         PIERCE_LEVEL = DataTracker.registerData(PersistentProjectileEntity.class, TrackedDataHandlerRegistry.BYTE);
+    }
+
+    protected TeleportTarget getTeleportTarget(ServerWorld destination, Entity entity) {
+        boolean bl = entity.world.getRegistryKey() == World.END && destination.getRegistryKey() == World.OVERWORLD;
+        boolean bl2 = destination.getRegistryKey() == World.END;
+        if (!bl && !bl2) {
+            boolean bl3 = destination.getRegistryKey() == World.NETHER;
+            if (entity.world.getRegistryKey() != World.NETHER && !bl3) {
+                return null;
+            } else {
+                WorldBorder worldBorder = destination.getWorldBorder();
+                double d = DimensionType.getCoordinateScaleFactor(entity.world.getDimension(), destination.getDimension());
+                BlockPos blockPos2 = worldBorder.clamp(entity.getX() * d, entity.getY(), entity.getZ() * d);
+                return getPortalRect(destination, blockPos2, bl3, worldBorder).map((rect) -> {
+                    BlockState blockState = entity.world.getBlockState(new BlockPos(50, 50, 50));
+                    Direction.Axis axis;
+                    Vec3d vec3d;
+                    if (blockState.contains(Properties.HORIZONTAL_AXIS)) {
+                        axis = blockState.get(Properties.HORIZONTAL_AXIS);
+                        BlockLocating.Rectangle rectangle = BlockLocating.getLargestRectangle(new BlockPos(50, 50, 50), axis, 21, Direction.Axis.Y, 21, (pos) -> entity.world.getBlockState(pos) == blockState);
+                        vec3d = positionInPortal(axis, rectangle, entity);
+                    } else {
+                        axis = Direction.Axis.X;
+                        vec3d = new Vec3d(0.5, 0.0, 0.0);
+                    }
+
+                    return NetherPortal.getNetherTeleportTarget(destination, rect, axis, vec3d, entity, entity.getVelocity(), entity.getYaw(), entity.getPitch());
+                }).orElse(null);
+            }
+        } else {
+            BlockPos blockPos;
+            if (bl2) {
+                blockPos = ServerWorld.END_SPAWN_POS;
+            } else {
+                blockPos = destination.getTopPosition(net.minecraft.world.Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, destination.getSpawnPos());
+            }
+
+            return new TeleportTarget(new Vec3d((double)blockPos.getX() + 0.5, blockPos.getY(), (double)blockPos.getZ() + 0.5), entity.getVelocity(), entity.getYaw(), entity.getPitch());
+        }
+    }
+
+    protected Optional<BlockLocating.Rectangle> getPortalRect(ServerWorld destWorld, BlockPos destPos, boolean destIsNether, WorldBorder worldBorder) {
+        return destWorld.getPortalForcer().getPortalRect(destPos, destIsNether, worldBorder);
+    }
+
+    protected Vec3d positionInPortal(Direction.Axis portalAxis, BlockLocating.Rectangle portalRect, Entity entity) {
+        return NetherPortal.entityPosInPortal(portalRect, portalAxis, entity.getPos(), entity.getDimensions(entity.getPose()));
+    }
+
+    public Entity moveToWorld(ServerWorld destination, Entity entityIn) {
+        if (entityIn.world instanceof ServerWorld && !entityIn.isRemoved()) {
+            entityIn.world.getProfiler().push("changeDimension");
+            entityIn.detach();
+            entityIn.world.getProfiler().push("reposition");
+            TeleportTarget teleportTarget = getTeleportTarget(destination, entityIn);
+            if (teleportTarget == null) {
+                return null;
+            } else {
+                entityIn.world.getProfiler().swap("reloading");
+                Entity entity = entityIn.getType().create(destination);
+                if (entity != null) {
+                    entity.copyFrom(entityIn);
+                    entity.refreshPositionAndAngles(teleportTarget.position.x, teleportTarget.position.y, teleportTarget.position.z, teleportTarget.yaw, entity.getPitch());
+                    entity.setVelocity(teleportTarget.velocity);
+                    destination.onDimensionChanged(entity);
+                    if (destination.getRegistryKey() == World.END) {
+                        ServerWorld.createEndSpawnPlatform(destination);
+                    }
+                }
+
+                entityIn.setRemoved(Entity.RemovalReason.CHANGED_DIMENSION);
+                entityIn.world.getProfiler().pop();
+                ((ServerWorld)entityIn.world).resetIdleTimeout();
+                destination.resetIdleTimeout();
+                entityIn.world.getProfiler().pop();
+                return entity;
+            }
+        } else {
+            return null;
+        }
     }
 }

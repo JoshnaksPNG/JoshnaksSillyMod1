@@ -189,6 +189,40 @@ public class ModItems
             new SwordItem(new ModToolMaterials.Terraria(), 7, -3F, new Item.Settings()),
             ModItemGroup.SILLY_TOOLS);
 
+    // Marioite Armour
+    public static final Item Marioite_Helmet = registerItem("marioite_helmet",
+            new ArmorItem(new ModArmorMaterials.MarioiteArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings()),
+            ModItemGroup.MARIOITE);
+
+    public static final Item Marioite_Chestplate = registerItem("marioite_chestplate",
+            new ArmorItem(new ModArmorMaterials.MarioiteArmorMaterial(), EquipmentSlot.CHEST, new Item.Settings()),
+            ModItemGroup.MARIOITE);
+
+    public static final Item Marioite_Leggings = registerItem("marioite_leggings",
+            new ArmorItem(new ModArmorMaterials.MarioiteArmorMaterial(), EquipmentSlot.LEGS, new Item.Settings()),
+            ModItemGroup.MARIOITE);
+
+    public static final Item Marioite_Boots = registerItem("marioite_boots",
+            new ArmorItem(new ModArmorMaterials.MarioiteArmorMaterial(), EquipmentSlot.FEET, new Item.Settings()),
+            ModItemGroup.MARIOITE);
+
+    // Luigite Armour
+    public static final Item Luigite_Helmet = registerItem("luigite_helmet",
+            new ArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings()),
+            ModItemGroup.MARIOITE);
+
+    public static final Item Luigite_Chestplate = registerItem("luigite_chestplate",
+            new ArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.CHEST, new Item.Settings()),
+            ModItemGroup.MARIOITE);
+
+    public static final Item Luigite_Leggings = registerItem("luigite_leggings",
+            new ArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.LEGS, new Item.Settings()),
+            ModItemGroup.MARIOITE);
+
+    public static final Item Luigite_Boots = registerItem("luigite_boots",
+            new ArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.FEET, new Item.Settings()),
+            ModItemGroup.MARIOITE);
+
     private static Item registerItem (String name, Item item, ItemGroup group)
     {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "W": {
+      "item": "sillymod1:marioite"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "W W",
+    "W W"
+  ],
+  "result": {
+    "item": "sillymod1:marioite_leggings"
+  }
+}

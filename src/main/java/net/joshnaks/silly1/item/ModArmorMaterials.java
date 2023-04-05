@@ -41,7 +41,7 @@ public class ModArmorMaterials
 
         @Override
         public String getName() {
-            return "diamond";
+            return "freddy";
         }
 
         @Override
@@ -52,6 +52,96 @@ public class ModArmorMaterials
         @Override
         public float getKnockbackResistance() {
             return 0;
+        }
+    }
+
+    public static class MarioiteArmorMaterial implements ArmorMaterial
+    {
+        public static MarioiteArmorMaterial INSTANCE = new MarioiteArmorMaterial();
+
+        @Override
+        public int getDurability(EquipmentSlot slot) {
+            return 25;
+        }
+
+        @Override
+        public int getProtectionAmount(EquipmentSlot slot) {
+            return 4;
+        }
+
+        @Override
+        public int getEnchantability() {
+            return 4;
+        }
+
+        @Override
+        public SoundEvent getEquipSound() {
+            return ModSoundEvents.FREDDY_ON_EVENT;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.ofItems(new ItemConvertible[]{ModItems.Marioite});
+        }
+
+        @Override
+        public String getName() {
+            return "marioite";
+        }
+
+        @Override
+        public float getToughness() {
+            return 1f;
+        }
+
+        @Override
+        public float getKnockbackResistance() {
+            return 0.3f;
+        }
+    }
+
+    public static class LuigiteArmorMaterial implements ArmorMaterial
+    {
+        public static LuigiteArmorMaterial INSTANCE = new LuigiteArmorMaterial();
+
+        @Override
+        public int getDurability(EquipmentSlot slot) {
+            return 27;
+        }
+
+        @Override
+        public int getProtectionAmount(EquipmentSlot slot) {
+            return 3;
+        }
+
+        @Override
+        public int getEnchantability() {
+            return 9;
+        }
+
+        @Override
+        public SoundEvent getEquipSound() {
+            return ModSoundEvents.FREDDY_ON_EVENT;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.ofItems(new ItemConvertible[]{ModItems.Luigite});
+        }
+
+        @Override
+        public String getName() {
+            return "luigite";
+        }
+
+        @Override
+        public float getToughness() {
+            return 1f;
+        }
+
+        @Override
+        public float getKnockbackResistance() {
+            return 0.3f;
         }
     }
 }
