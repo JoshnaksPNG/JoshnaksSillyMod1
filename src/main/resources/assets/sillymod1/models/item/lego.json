@@ -1,3 +1,7 @@
 {
-  "parent": "sillymod1:block/lego"
+  "parent": "item/generated",
+  "textures":
+  {
+    "layer0": "sillymod1:block/lego"
+  }
 }

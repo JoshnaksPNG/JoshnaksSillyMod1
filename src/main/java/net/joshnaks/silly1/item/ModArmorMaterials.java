@@ -7,6 +7,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 
 public class ModArmorMaterials
 {
@@ -76,7 +77,7 @@ public class ModArmorMaterials
 
         @Override
         public SoundEvent getEquipSound() {
-            return ModSoundEvents.FREDDY_ON_EVENT;
+            return SoundEvents.ITEM_ARMOR_EQUIP_LEATHER;
         }
 
         @Override
@@ -121,7 +122,7 @@ public class ModArmorMaterials
 
         @Override
         public SoundEvent getEquipSound() {
-            return ModSoundEvents.FREDDY_ON_EVENT;
+            return SoundEvents.ITEM_ARMOR_EQUIP_LEATHER;
         }
 
         @Override

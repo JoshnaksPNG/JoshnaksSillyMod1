@@ -1,20 +1,30 @@
 package net.joshnaks.silly1.block.custom;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CarpetBlock;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class LegoBlock extends CarpetBlock
+import java.util.List;
+
+public class LegoBlock extends GlassBlock
 {
     public LegoBlock(Settings settings)
     {
         super(settings);
+    }
+
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 4.0, 16.0);
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE;
     }
 
     @Override
@@ -47,5 +57,18 @@ public class LegoBlock extends CarpetBlock
         super.onEntityLand(world, entity);
     }
 
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        List<Entity> entities = world.getOtherEntities(null, new Box(pos));
 
+        for( Entity entity : entities )
+        {
+            if(entity instanceof LivingEntity livingEntity)
+            {
+                livingEntity.damage(DamageSource.CACTUS, 9999.0f);
+            }
+        }
+
+        super.randomDisplayTick(state, world, pos, random);
+    }
 }

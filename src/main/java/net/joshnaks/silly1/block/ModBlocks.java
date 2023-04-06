@@ -10,6 +10,7 @@ import net.joshnaks.silly1.block.custom.LegoBlock;
 import net.joshnaks.silly1.block.custom.TrollGrassBlock;
 import net.joshnaks.silly1.item.ModItemGroup;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
@@ -51,7 +52,7 @@ public class ModBlocks
             new DidYouKnowBlock(FabricBlockSettings.of(Material.METAL).luminance(3)), ModItemGroup.SILLY_BLOCKS);
 
     public static final Block LEGO = registerBlock("lego",
-            new LegoBlock(FabricBlockSettings.of(Material.CARPET)), ModItemGroup.SILLY_BLOCKS);
+            new LegoBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque()), ModItemGroup.SILLY_BLOCKS);
 
     public static final Block CURSED_DOOR = registerBlock("cursed_door",
             new CursedDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(3.0F).sounds(BlockSoundGroup.WOOD).nonOpaque(), SoundEvents.BLOCK_WOODEN_DOOR_CLOSE, SoundEvents.BLOCK_WOODEN_DOOR_OPEN), ModItemGroup.SILLY_BLOCKS);

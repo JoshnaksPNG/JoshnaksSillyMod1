@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import net.joshnaks.silly1.block.ModBlocks;
 import net.joshnaks.silly1.client.FreddyMaskHudOverlay;
 import net.joshnaks.silly1.client.render.entity.*;
 import net.joshnaks.silly1.entity.ModEntities;
@@ -77,6 +78,8 @@ public class SillyModClient implements ClientModInitializer
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
                 ModFluids.STILL_MARINARA, ModFluids.FLOWING_MARINARA);
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEGO, RenderLayer.getCutout());
 
         Dilation d = new Dilation(1f);
         EntityModelLayerRegistry.TexturedModelDataProvider p = () -> CreeperEntityModel.getTexturedModelData(d);
