@@ -145,4 +145,49 @@ public class ModArmorMaterials
             return 0.3f;
         }
     }
+
+    public static class TatteredArmorMaterial implements ArmorMaterial
+    {
+        public static TatteredArmorMaterial INSTANCE = new TatteredArmorMaterial();
+
+        @Override
+        public int getDurability(EquipmentSlot slot) {
+            return 1;
+        }
+
+        @Override
+        public int getProtectionAmount(EquipmentSlot slot) {
+            return 1;
+        }
+
+        @Override
+        public int getEnchantability() {
+            return 35;
+        }
+
+        @Override
+        public SoundEvent getEquipSound() {
+            return SoundEvents.ITEM_ARMOR_EQUIP_CHAIN;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.ofItems(new ItemConvertible[]{Items.GOLD_NUGGET});
+        }
+
+        @Override
+        public String getName() {
+            return "tattered_gold";
+        }
+
+        @Override
+        public float getToughness() {
+            return 0;
+        }
+
+        @Override
+        public float getKnockbackResistance() {
+            return 0;
+        }
+    }
 }

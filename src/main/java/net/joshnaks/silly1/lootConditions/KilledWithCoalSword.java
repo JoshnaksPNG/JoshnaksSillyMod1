@@ -34,7 +34,15 @@ public class KilledWithCoalSword implements LootCondition {
     }
 
     public boolean test(LootContext lootContext) {
-        Entity entity = lootContext.requireParameter(LootContextParameters.KILLER_ENTITY);
+
+        Entity entity = null;
+
+
+
+        if(lootContext.hasParameter(LootContextParameters.KILLER_ENTITY))
+        {
+            entity = lootContext.requireParameter(LootContextParameters.KILLER_ENTITY);
+        }
 
         if(entity instanceof LivingEntity livingEntity)
         {

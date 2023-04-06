@@ -65,16 +65,16 @@ public class ModItems
             new ElytraItem(new Item.Settings().maxDamage(1)), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Tattered_Helm = registerItem("tattered_helm",
-            new ArmorItem(ModToolMaterials.TatteredMaterial.INSTANCE, EquipmentSlot.HEAD, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new TatteredArmorItem(ModArmorMaterials.TatteredArmorMaterial.INSTANCE, EquipmentSlot.HEAD, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Tattered_Chest = registerItem("tattered_chest",
-            new ArmorItem(ModToolMaterials.TatteredMaterial.INSTANCE, EquipmentSlot.CHEST, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new TatteredArmorItem(ModArmorMaterials.TatteredArmorMaterial.INSTANCE, EquipmentSlot.CHEST, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Tattered_Leggings = registerItem("tattered_leggings",
-            new ArmorItem(ModToolMaterials.TatteredMaterial.INSTANCE, EquipmentSlot.LEGS, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new TatteredArmorItem(ModArmorMaterials.TatteredArmorMaterial.INSTANCE, EquipmentSlot.LEGS, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Tattered_Boots = registerItem("tattered_boots",
-            new ArmorItem(ModToolMaterials.TatteredMaterial.INSTANCE, EquipmentSlot.FEET, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new TatteredArmorItem(ModArmorMaterials.TatteredArmorMaterial.INSTANCE, EquipmentSlot.FEET, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Fire_Flower = registerItem("fire_flower",
             new FireFlowerItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);

@@ -27,7 +27,11 @@ public class LegoBlock extends GlassBlock
         return SHAPE;
     }
 
-    @Override
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        entity.damage(DamageSource.CACTUS, 9999.0F);
+    }
+
+    /*@Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity)
     {
         if(entity instanceof LivingEntity livingEntity)
@@ -70,5 +74,5 @@ public class LegoBlock extends GlassBlock
         }
 
         super.randomDisplayTick(state, world, pos, random);
-    }
+    }*/
 }

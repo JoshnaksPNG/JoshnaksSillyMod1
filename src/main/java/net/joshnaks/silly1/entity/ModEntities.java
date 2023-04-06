@@ -3,6 +3,7 @@ package net.joshnaks.silly1.entity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.joshnaks.silly1.SillyMod1;
 import net.joshnaks.silly1.entity.custom.*;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
