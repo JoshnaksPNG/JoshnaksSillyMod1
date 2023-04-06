@@ -104,28 +104,16 @@ public class CannonProjectile extends ProjectileEntity implements GeoEntity
             ServerWorld serverWorld2 = minecraftServer.getWorld(registryKey);
             if(serverWorld2 != null && minecraftServer.isNetherAllowed())
             {
-                Chunk chunk = serverWorld2.getChunk(livingEntity.getBlockPos());
-                //serverWorld2.tickChunk( (WorldChunk) chunk, 1);
-                livingEntity.world.getProfiler().push("portal");
+                serverWorld.getProfiler().push("portal");
 
-                livingEntity.resetPortalCooldown();
-                moveToWorld(serverWorld2, livingEntity);
-
-
-
-
-                livingEntity.world.getProfiler().pop();
-                //serverWorld.getProfiler().push("portal");
-
-                //entity.setPos(0, 0, 0);
-                //serverWorld2.;
-                //livingEntity.moveToWorld(serverWorld2);
-                //serverWorld.getProfiler().pop();
+                livingEntity.setInNetherPortal(livingEntity.getBlockPos());
+                livingEntity.moveToWorld(serverWorld2);
+                serverWorld.getProfiler().pop();
 
                 // Remove Portal Blocks here
-                //BlockPos npos = livingEntity.getBlockPos();
+                BlockPos npos = livingEntity.getBlockPos();
 
-                //clearPortal(npos.getX(), npos.getY(), npos.getZ(), livingEntity.world);
+                clearPortal(npos.getX(), npos.getY(), npos.getZ(), livingEntity.world);
             }
 
             this.discard();
