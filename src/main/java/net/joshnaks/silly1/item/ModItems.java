@@ -98,7 +98,7 @@ public class ModItems
             new PocketGravelPitItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Metal_Mario_Cap = registerItem("metal_mario_cap",
-            new MetalMarioCapItem(ArmorMaterials.IRON, EquipmentSlot.HEAD, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new MetalMarioCapItem(new ModArmorMaterials.MetalMarioArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Vaccuum = registerItem("vaccuum",
             new VaccuumItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
@@ -208,19 +208,19 @@ public class ModItems
 
     // Luigite Armour
     public static final Item Luigite_Helmet = registerItem("luigite_helmet",
-            new ArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings()),
+            new LuigiArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings()),
             ModItemGroup.MARIOITE);
 
     public static final Item Luigite_Chestplate = registerItem("luigite_chestplate",
-            new ArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.CHEST, new Item.Settings()),
+            new LuigiArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.CHEST, new Item.Settings()),
             ModItemGroup.MARIOITE);
 
     public static final Item Luigite_Leggings = registerItem("luigite_leggings",
-            new ArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.LEGS, new Item.Settings()),
+            new LuigiArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.LEGS, new Item.Settings()),
             ModItemGroup.MARIOITE);
 
     public static final Item Luigite_Boots = registerItem("luigite_boots",
-            new ArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.FEET, new Item.Settings()),
+            new LuigiArmorItem(new ModArmorMaterials.LuigiteArmorMaterial(), EquipmentSlot.FEET, new Item.Settings()),
             ModItemGroup.MARIOITE);
 
     private static Item registerItem (String name, Item item, ItemGroup group)

@@ -100,7 +100,7 @@ public class CannonProjectile extends ProjectileEntity implements GeoEntity
         {
 
             MinecraftServer minecraftServer = serverWorld.getServer();
-            RegistryKey<World> registryKey = livingEntity.world.getRegistryKey() == World.NETHER ? World.NETHER : World.NETHER;
+            RegistryKey<World> registryKey = World.NETHER;
             ServerWorld serverWorld2 = minecraftServer.getWorld(registryKey);
             if(serverWorld2 != null && minecraftServer.isNetherAllowed())
             {

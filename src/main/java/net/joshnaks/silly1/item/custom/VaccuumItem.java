@@ -1,5 +1,6 @@
 package net.joshnaks.silly1.item.custom;
 
+import net.joshnaks.silly1.item.ModItems;
 import net.joshnaks.silly1.sounds.ModSoundEvents;
 import net.minecraft.block.JukeboxBlock;
 import net.minecraft.entity.Entity;
@@ -23,12 +24,16 @@ import java.util.function.Consumer;
 public class VaccuumItem extends Item
 {
     public VaccuumItem(Settings settings) {
+
         super(settings);
+        playingSound = false;
     }
 
     private Box box;
 
     private double radius = 16d;
+
+    private boolean playingSound = false;
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
@@ -90,7 +95,12 @@ public class VaccuumItem extends Item
         }
 
 
-        world.playSound(null, user.getBlockPos(), ModSoundEvents.VACUUM_EVENT, SoundCategory.PLAYERS, 0.75f, 1f);
+        if(!playingSound)
+        {
+            playingSound = true;
+            world.playSound(null, user.getBlockPos(), ModSoundEvents.VACUUM_EVENT, SoundCategory.PLAYERS, 0.75f, 1f);
+        }
+
 
         if(user.getMainHandStack().getItem().equals(this))
         {
@@ -112,7 +122,19 @@ public class VaccuumItem extends Item
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks)
     {
         //world.playSound(null, user.getBlockPos(), ModSoundEvents.VACUUM_OFF_EVENT, SoundCategory.PLAYERS, 1f, 1f);
+        playingSound = false;
         super.onStoppedUsing(stack, world, user, remainingUseTicks);
+    }
+
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected)
+    {
+        if(!holdingThis(entity))
+        {
+            playingSound = false;
+        }
+
+        super.inventoryTick(stack, world, entity, slot, selected);
     }
 
     public void updateBox(BlockPos pos)
@@ -123,5 +145,21 @@ public class VaccuumItem extends Item
 
 
         box = new Box(x + radius, y + radius, z + radius, x- radius, y - radius, z - radius);
+    }
+
+    public boolean holdingThis(Entity entity)
+    {
+        if(entity instanceof LivingEntity)
+        {
+            for(ItemStack stack : entity.getHandItems())
+            {
+                if(stack.getItem() == ModItems.Vaccuum)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }

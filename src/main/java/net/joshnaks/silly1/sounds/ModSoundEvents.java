@@ -1,6 +1,8 @@
 package net.joshnaks.silly1.sounds;
 
 import net.joshnaks.silly1.SillyMod1;
+import net.minecraft.block.JukeboxBlock;
+import net.minecraft.block.entity.JukeboxBlockEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
@@ -19,6 +21,8 @@ public class ModSoundEvents
     public static final Identifier VACUUM_OFF_ID = new Identifier("sillymod1:vacuum_off");
 
     public static final Identifier VACUUM_ON_ID = new Identifier("sillymod1:vacuum_on");
+
+    public static final Identifier METAL_MARIO_ID = new Identifier("sillymod1:metal_mario");
     public static SoundEvent LEBRON_EVENT = SoundEvent.of(LEBRON_ID);
     public static SoundEvent EINSTEIN_EVENT = SoundEvent.of(EINSTEIN_ID);
     public static SoundEvent FAIL_EVENT = SoundEvent.of(FAIL_ID);
@@ -28,6 +32,7 @@ public class ModSoundEvents
     public static SoundEvent VACUUM_EVENT = SoundEvent.of(VACUUM_ID);
     public static SoundEvent VACUUM_OFF_EVENT = SoundEvent.of(VACUUM_OFF_ID);
     public static SoundEvent VACUUM_ON_EVENT = SoundEvent.of(VACUUM_ON_ID);
+    public static SoundEvent METAL_MARIO_EVENT = SoundEvent.of(METAL_MARIO_ID);
 
     public static final SoundEvent LEBRON = Registry.register(Registries.SOUND_EVENT, LEBRON_ID, LEBRON_EVENT );
     public static final SoundEvent EINSTEIN = Registry.register(Registries.SOUND_EVENT, EINSTEIN_ID, EINSTEIN_EVENT );
@@ -38,6 +43,7 @@ public class ModSoundEvents
     public static final SoundEvent VACUUM = Registry.register(Registries.SOUND_EVENT, VACUUM_ID, VACUUM_EVENT );
     public static final SoundEvent VACUUM_ON = Registry.register(Registries.SOUND_EVENT, VACUUM_ON_ID, VACUUM_ON_EVENT );
     public static final SoundEvent VACUUM_OFF = Registry.register(Registries.SOUND_EVENT, VACUUM_OFF_ID, VACUUM_OFF_EVENT );
+    public static final SoundEvent METAL_MARIO = Registry.register(Registries.SOUND_EVENT, METAL_MARIO_ID, METAL_MARIO_EVENT );
 
     public static void registerModSounds()
     {

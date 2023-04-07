@@ -190,4 +190,49 @@ public class ModArmorMaterials
             return 0;
         }
     }
+
+    public static class MetalMarioArmorMaterial implements ArmorMaterial
+    {
+        public static MetalMarioArmorMaterial INSTANCE = new MetalMarioArmorMaterial();
+
+        @Override
+        public int getDurability(EquipmentSlot slot) {
+            return 1200;
+        }
+
+        @Override
+        public int getProtectionAmount(EquipmentSlot slot) {
+            return 20;
+        }
+
+        @Override
+        public int getEnchantability() {
+            return 0;
+        }
+
+        @Override
+        public SoundEvent getEquipSound() {
+            return SoundEvents.ITEM_ARMOR_EQUIP_IRON;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.ofItems(new ItemConvertible[]{Items.BEDROCK});
+        }
+
+        @Override
+        public String getName() {
+            return "metal_mario";
+        }
+
+        @Override
+        public float getToughness() {
+            return 0;
+        }
+
+        @Override
+        public float getKnockbackResistance() {
+            return 100f;
+        }
+    }
 }

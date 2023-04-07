@@ -54,5 +54,12 @@
     [
       "sillymod1:vacuum_off"
     ]
+  },
+  "metal_mario":
+  {
+    "sounds":
+    [
+      "sillymod1:metal_mario"
+    ]
   }
 }
