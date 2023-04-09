@@ -4,7 +4,8 @@
   "package": "net.joshnaks.silly1.mixin",
   "compatibilityLevel": "JAVA_18",
   "mixins": [
-    "ModEntityDataSaverMixin"
+    "ModEntityDataSaverMixin",
+    "BrewingRecipeRegistryMixin"
   ],
   "client": [
     "ExampleMixin"

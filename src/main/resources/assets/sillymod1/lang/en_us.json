@@ -89,6 +89,8 @@
   "effect.sillymod1.water_walk": "Water Walk",
 
   "item.minecraft.potion.effect.einstein": "Einstein Potion",
+  "item.minecraft.splash_potion.effect.einstein": "Einstein Splash Potion",
+  "item.minecraft.lingering_potion.effect.einstein": "Lingering Einstein Potion",
 
   "entity.sillymod1.husk_slave": "Husk Slave"
 }
