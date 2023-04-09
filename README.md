@@ -1,5 +1,19 @@
 # Joshnaks Silly Mod
 
-## Notice
+## Description
 
-This Mod is unfinished.
+This mod's central theme is that it is generally silly. 
+
+Not all the elements mesh necessarily, but all are silly.
+
+This mod adds:
+  3 goofy sets of armour,
+  3 humourous sets of ores,
+  4 comedic blocks,
+  14 silly weapons,
+  3 creatures,
+  6 terrific tools,
+  numerous other nutty items,
+  new potion, 
+  
+As well as unfinished items accessable through the Creative Menu
