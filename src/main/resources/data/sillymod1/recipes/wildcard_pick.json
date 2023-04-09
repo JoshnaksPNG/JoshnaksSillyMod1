@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "Q#Q",
+    " / ",
+    " / "
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "sillymod1:marioite"
+    },
+    "Q":
+    {
+      "item": "minecraft:diamond"
+    },
+    "/":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "sillymod1:wildcard_pick"
+  }
+}
