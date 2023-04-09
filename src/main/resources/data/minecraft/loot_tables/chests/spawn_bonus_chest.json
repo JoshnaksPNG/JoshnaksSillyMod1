@@ -12,6 +12,26 @@
           "type": "minecraft:item",
           "name": "minecraft:wooden_axe",
           "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:terraria_sword",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:terraria_broadsword",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:terraria_pickaxe",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:terraria_axe",
+          "weight": 10
         }
       ],
       "rolls": 1.0

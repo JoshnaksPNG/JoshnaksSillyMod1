@@ -154,6 +154,26 @@
           ],
           "name": "minecraft:book",
           "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:terraria_sword",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:terraria_broadsword",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:terraria_pickaxe",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:terraria_axe",
+          "weight": 10
         }
       ],
       "rolls": 1.0
