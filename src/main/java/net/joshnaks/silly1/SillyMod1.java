@@ -14,6 +14,7 @@ import net.joshnaks.silly1.painting.ModPaintings;
 import net.joshnaks.silly1.potion.ModPotions;
 import net.joshnaks.silly1.sounds.ModSoundEvents;
 import net.joshnaks.silly1.util.ModLootTableModifiers;
+import net.joshnaks.silly1.world.gen.ModWorldGeneration;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.sound.SoundEvent;
@@ -42,6 +43,7 @@ public class SillyMod1 implements ModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CURSED_DOOR, RenderLayer.getCutout());
 
 
+		ModWorldGeneration.generateModWorldGen();
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();

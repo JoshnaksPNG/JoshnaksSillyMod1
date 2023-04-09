@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "W": {
+      "item": "sillymod1:marioite"
+    },
+    "U": {
+      "item": "minecraft:iron_helmet"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "WUW",
+    "WWW"
+  ],
+  "result": {
+    "item": "sillymod1:metal_mario_cap"
+  }
+}

@@ -23,6 +23,9 @@
     ],
     "client": [
       "net.joshnaks.silly1.SillyModClient"
+    ],
+    "fabric-datagen": [
+      "net.joshnaks.silly1.SillyModDataGenerator"
     ]
   },
   "mixins": [
