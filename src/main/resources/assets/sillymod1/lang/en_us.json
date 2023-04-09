@@ -86,8 +86,9 @@
   "effect.sillymod1.fire_trail": "Fire Trail",
   "effect.sillymod1.freddied": "Freddied",
   "effect.sillymod1.oiled": "Covered In Oil",
+  "effect.sillymod1.water_walk": "Water Walk",
 
   "item.minecraft.potion.effect.einstein": "Einstein Potion",
 
-  "entity.sillymod1.husk_slave": "Husk"
+  "entity.sillymod1.husk_slave": "Husk Slave"
 }

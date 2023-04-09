@@ -1,5 +1,6 @@
 package net.joshnaks.silly1.item.custom;
 
+import net.joshnaks.silly1.effect.ModEffects;
 import net.joshnaks.silly1.item.ModItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -29,12 +30,18 @@ public class LuigiArmorItem extends ArmorItem
         {
             if(entityIsWearing(livingEntity))
             {
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST));
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 1));
+                livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.WaterWalk, 1));
             } else
             {
                 if(livingEntity.hasStatusEffect(StatusEffects.JUMP_BOOST))
                 {
                     livingEntity.removeStatusEffect(StatusEffects.JUMP_BOOST);
+                }
+
+                if(livingEntity.hasStatusEffect(ModEffects.WaterWalk))
+                {
+                    livingEntity.removeStatusEffect(ModEffects.WaterWalk);
                 }
             }
         }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "U": {
+      "item": "minecraft:cobweb"
+    },
+    "W": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "WUW",
+    "WWW"
+  ],
+  "result": {
+    "item": "sillymod1:did_you_know_block"
+  }
+}

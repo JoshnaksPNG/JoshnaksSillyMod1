@@ -20,6 +20,7 @@ public class ModConfiguredFeatures
 {
     public static final RegistryKey<ConfiguredFeature<?,?>> MARIOITE_ORE_KEY = registerKey("marioite_ore");
     public static final RegistryKey<ConfiguredFeature<?,?>> LUIGITE_ORE_KEY = registerKey("luigite_ore");
+    public static final RegistryKey<ConfiguredFeature<?,?>> TROLL_ORE_KEY = registerKey("troll_ore");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?,?>> context)
     {
@@ -34,9 +35,14 @@ public class ModConfiguredFeatures
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.LUIGITE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_LUIGITE_ORE.getDefaultState()));
 
+        List<OreFeatureConfig.Target> overworld_troll_ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.TROLLIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_trollium_ORE.getDefaultState()));
+
 
         register(context, MARIOITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworld_mario_ores, 15));
         register(context, LUIGITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworld_luigi_ores, 15));
+        register(context, TROLL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworld_troll_ores, 15));
     }
 
     public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name)

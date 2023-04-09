@@ -20,6 +20,10 @@ public class ModEffects
 
     public static final StatusEffect Oiled = registerEffects(new CoveredInOilEffect(), "oiled");
 
+    public static final StatusEffect WaterWalk = registerEffects(new WaterWalkEffect(), "water_walk");
+
+    public static final StatusEffect Luigied = registerEffects(new WaterWalkEffect(), "luigied");
+
     private static StatusEffect registerEffects(StatusEffect statusEffect, String name)
     {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(SillyMod1.MOD_ID, name),

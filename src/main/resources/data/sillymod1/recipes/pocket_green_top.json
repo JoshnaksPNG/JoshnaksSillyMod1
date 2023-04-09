@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "###",
+    "#/#",
+    "###"
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "sillymod1:trollium"
+    },
+    "/":
+    {
+      "item": "minecraft:grass_block"
+    }
+  },
+  "result":
+  {
+    "item": "sillymod1:pocket_green_top"
+  }
+}

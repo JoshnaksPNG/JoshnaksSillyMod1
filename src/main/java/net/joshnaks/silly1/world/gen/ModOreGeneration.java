@@ -15,5 +15,8 @@ public class ModOreGeneration
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.LUIGI_ORE_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.TROLL_ORE_PLACED_KEY);
     }
 }

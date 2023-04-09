@@ -17,6 +17,7 @@ public class ModPlacedFeatures
 {
     public static final RegistryKey<PlacedFeature> MARIO_ORE_PLACED_KEY = registerKey("mario_ore_placed");
     public static final RegistryKey<PlacedFeature> LUIGI_ORE_PLACED_KEY = registerKey("luigi_ore_placed");
+    public static final RegistryKey<PlacedFeature> TROLL_ORE_PLACED_KEY = registerKey("troll_ore_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -26,6 +27,10 @@ public class ModPlacedFeatures
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
 
         register(context, LUIGI_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.LUIGITE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+
+        register(context, TROLL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TROLL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
     }
