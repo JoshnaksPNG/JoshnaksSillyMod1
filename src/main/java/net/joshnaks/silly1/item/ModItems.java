@@ -113,7 +113,7 @@ public class ModItems
             new SonicShoesItem(ArmorMaterials.LEATHER, EquipmentSlot.FEET, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Ultra_Pick = registerItem("ultra_pick",
-            new PickaxeItem(ToolMaterials.DIAMOND, 0, 2, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new UltraPickItem(ToolMaterials.DIAMOND, 0, 2, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Coal_Axe = registerItem("coal_axe",
             new AxeItem(ModToolMaterials.CoalToolMaterial.INSTANCE, 4, 1, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
