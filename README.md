@@ -8,7 +8,7 @@ Not all the elements mesh necessarily, but all are silly.
 
 This mod adds:
   3 goofy sets of armour,
-  3 humourous sets of ores,
+  3 humorous sets of ores,
   4 comedic blocks,
   14 silly weapons,
   3 creatures,
@@ -16,4 +16,4 @@ This mod adds:
   numerous other nutty items,
   new potion, 
   
-As well as unfinished items accessable through the Creative Menu
+As well as unfinished items accessible through the Creative Menu
