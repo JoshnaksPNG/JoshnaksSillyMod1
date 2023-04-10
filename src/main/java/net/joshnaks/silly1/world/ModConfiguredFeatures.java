@@ -9,10 +9,8 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 import java.util.List;
 
@@ -21,6 +19,7 @@ public class ModConfiguredFeatures
     public static final RegistryKey<ConfiguredFeature<?,?>> MARIOITE_ORE_KEY = registerKey("marioite_ore");
     public static final RegistryKey<ConfiguredFeature<?,?>> LUIGITE_ORE_KEY = registerKey("luigite_ore");
     public static final RegistryKey<ConfiguredFeature<?,?>> TROLL_ORE_KEY = registerKey("troll_ore");
+    public static final RegistryKey<ConfiguredFeature<?,?>> FIRE_FLOWER_KEY = registerKey("fire_flower_key");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?,?>> context)
     {
@@ -39,10 +38,16 @@ public class ModConfiguredFeatures
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.TROLLIUM_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_trollium_ORE.getDefaultState()));
 
+        List<OreFeatureConfig.Target> overworld_fire_flowers =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.TROLLIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_trollium_ORE.getDefaultState()));
+
 
         register(context, MARIOITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworld_mario_ores, 15));
         register(context, LUIGITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworld_luigi_ores, 15));
         register(context, TROLL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworld_troll_ores, 15));
+        register(context, FIRE_FLOWER_KEY, Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.Fire_Flower_Block)))));
     }
 
     public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name)

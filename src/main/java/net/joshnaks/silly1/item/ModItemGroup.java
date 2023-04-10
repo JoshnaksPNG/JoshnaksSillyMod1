@@ -29,4 +29,9 @@ public class ModItemGroup
             .displayName(Text.literal("Silly Food"))
             .icon(() -> new ItemStack(ModItems.Iron_Apple))
             .build();
+
+    public static final ItemGroup UNFINISHED = FabricItemGroup.builder(new Identifier(SillyMod1.MOD_ID + "_unfinished"))
+            .displayName(Text.literal("Unfinished Goofies"))
+            .icon(() -> new ItemStack(ModItems.Ultra_Pick))
+            .build();
 }

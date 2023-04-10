@@ -33,7 +33,7 @@ public class ModItems
 
     // Silly Tools
     public static final Item Gold_Shield = registerItem("gold_shield",
-            new GoldShieldItem(new Item.Settings().maxDamage(1)), ModItemGroup.SILLY_TOOLS);
+            new GoldShieldItem(new Item.Settings().maxDamage(1)), ModItemGroup.UNFINISHED);
 
     public static final Item Incorrect_parrot = registerItem("incorrect_parrot",
             new SwordItem (ModToolMaterials.ParrotToolMaterial.INSTANCE, 3, -2.4F,
@@ -62,7 +62,7 @@ public class ModItems
                     new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Paper_Elytra = registerItem("paper_elytra",
-            new ElytraItem(new Item.Settings().maxDamage(1)), ModItemGroup.SILLY_TOOLS);
+            new ElytraItem(new Item.Settings().maxDamage(1)), ModItemGroup.UNFINISHED);
 
     public static final Item Tattered_Helm = registerItem("tattered_helm",
             new TatteredArmorItem(ModArmorMaterials.TatteredArmorMaterial.INSTANCE, EquipmentSlot.HEAD, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
@@ -89,7 +89,7 @@ public class ModItems
             new CrossbowItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Wallet = registerItem("wallet",
-            new WalletItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new WalletItem(new Item.Settings()), ModItemGroup.UNFINISHED);
 
     public static final Item Pocket_Greentop = registerItem("pocket_greentop",
             new PocketGreentopItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
@@ -101,7 +101,7 @@ public class ModItems
             new MetalMarioCapItem(new ModArmorMaterials.MetalMarioArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Vaccuum = registerItem("vaccuum",
-            new VaccuumItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new VaccuumItem(new Item.Settings()), ModItemGroup.UNFINISHED);
 
     public static final Item Troll_Helmet = registerItem("troll_helmet",
             new TrollHelmetItem(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
@@ -110,7 +110,7 @@ public class ModItems
             new GhastCannonItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Sonic_Shoes = registerItem("sonic_shoes",
-            new SonicShoesItem(ArmorMaterials.LEATHER, EquipmentSlot.FEET, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new SonicShoesItem(ArmorMaterials.LEATHER, EquipmentSlot.FEET, new Item.Settings()), ModItemGroup.UNFINISHED);
 
     public static final Item Ultra_Pick = registerItem("ultra_pick",
             new UltraPickItem(ToolMaterials.DIAMOND, 0, 2, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
@@ -119,7 +119,7 @@ public class ModItems
             new AxeItem(ModToolMaterials.CoalToolMaterial.INSTANCE, 4, 1, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Alternatool = registerItem("alternatool",
-            new AxeItem(ToolMaterials.DIAMOND, 0, 1, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new AxeItem(ToolMaterials.DIAMOND, 0, 1, new Item.Settings()), ModItemGroup.UNFINISHED);
 
     public static final Item Wildcard_Pick = registerItem("wildcard_pick",
             new WildcardPickItem(ToolMaterials.IRON, 0, 1, new Item.Settings()), ModItemGroup.SILLY_TOOLS);
@@ -131,7 +131,7 @@ public class ModItems
             new ClarinetItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
 
     public static final Item Scepter = registerItem("scepter",
-            new ScepterItem(new Item.Settings()), ModItemGroup.SILLY_TOOLS);
+            new ScepterItem(new Item.Settings()), ModItemGroup.UNFINISHED);
 
     // Silly Food
     public static final Item Iron_Apple = registerItem("iron_apple",
@@ -147,10 +147,10 @@ public class ModItems
             new Item(new Item.Settings().food(ModFoodComponents.DECAYING_FLESH).maxCount(1)), ModItemGroup.SILLY_FOOD);
 
     public static final Item Spaghetti = registerItem("spaghetti",
-            new PastaItem(new Item.Settings().maxCount(1)), ModItemGroup.SILLY_FOOD);
+            new PastaItem(new Item.Settings().maxCount(1)), ModItemGroup.UNFINISHED);
 
     public static final Item Sauce_Spaghetti = registerItem("sauced_spaghetti",
-            new Item(new Item.Settings().food(FoodComponents.BEEF)), ModItemGroup.SILLY_FOOD);
+            new Item(new Item.Settings().food(FoodComponents.BEEF)), ModItemGroup.UNFINISHED);
 
     // Spawn Eggs
     public static final Item Incompetent_Creeper_Spawn_Egg = registerItem("incompetent_spawn_egg",

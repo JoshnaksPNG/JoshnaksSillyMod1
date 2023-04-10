@@ -329,6 +329,11 @@
           "type": "minecraft:item",
           "name": "sillymod1:naughtigen_cannon",
           "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:fire_flower",
+          "weight": 30
         }
       ],
       "rolls": {

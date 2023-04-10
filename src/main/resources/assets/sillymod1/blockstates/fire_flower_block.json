@@ -1,0 +1,9 @@
+{
+  "variants":
+  {
+    "":
+    {
+      "model": "sillymod1:block/fire_flower_block"
+    }
+  }
+}

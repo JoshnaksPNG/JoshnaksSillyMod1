@@ -8,6 +8,7 @@ import net.joshnaks.silly1.block.custom.CursedDoorBlock;
 import net.joshnaks.silly1.block.custom.DidYouKnowBlock;
 import net.joshnaks.silly1.block.custom.LegoBlock;
 import net.joshnaks.silly1.block.custom.TrollGrassBlock;
+import net.joshnaks.silly1.effect.ModEffects;
 import net.joshnaks.silly1.item.ModItemGroup;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -68,6 +69,10 @@ public class ModBlocks
 
     public static final Block TROLL_GRASS = registerBlock("troll_grass",
             new TrollGrassBlock(FabricBlockSettings.of(Material.SOIL)), ModItemGroup.SILLY_BLOCKS);
+
+    public static final Block Fire_Flower_Block = registerBlock("fire_flower_block",
+            new FlowerBlock(ModEffects.FireTrail, 20,
+                    FabricBlockSettings.copyOf(Blocks.DANDELION)), ModItemGroup.UNFINISHED);
     private static Block registerBlock(String name, Block block, ItemGroup group)
     {
         registerBlockItem(name, block, group);

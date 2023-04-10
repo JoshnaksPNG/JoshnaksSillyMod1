@@ -41,6 +41,7 @@ public class SillyMod1 implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.PIGLIN_SLAVE, PiglinSlaveEntity.createMobAttributes());
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CURSED_DOOR, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Fire_Flower_Block, RenderLayer.getCutout());
 
 
 		ModWorldGeneration.generateModWorldGen();

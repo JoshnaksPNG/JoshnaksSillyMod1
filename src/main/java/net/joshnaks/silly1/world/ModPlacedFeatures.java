@@ -8,8 +8,10 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
 
 import java.util.List;
 
@@ -18,6 +20,8 @@ public class ModPlacedFeatures
     public static final RegistryKey<PlacedFeature> MARIO_ORE_PLACED_KEY = registerKey("mario_ore_placed");
     public static final RegistryKey<PlacedFeature> LUIGI_ORE_PLACED_KEY = registerKey("luigi_ore_placed");
     public static final RegistryKey<PlacedFeature> TROLL_ORE_PLACED_KEY = registerKey("troll_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> FIRE_FLOWER_PLACED_KEY = registerKey("fire_flower_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -33,6 +37,10 @@ public class ModPlacedFeatures
         register(context, TROLL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TROLL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+
+        register(context, FIRE_FLOWER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FIRE_FLOWER_KEY),
+                ModOrePlacement.modifiersWithCount(12,
+                        SquarePlacementModifier.of()));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

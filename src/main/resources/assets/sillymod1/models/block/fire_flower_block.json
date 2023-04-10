@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures":
+  {
+    "cross": "sillymod1:block/fire_flower_block"
+  }
+}

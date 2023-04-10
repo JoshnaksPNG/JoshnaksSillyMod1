@@ -49,6 +49,11 @@
           ],
           "name": "minecraft:wheat",
           "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:fire_flower",
+          "weight": 30
         }
       ],
       "rolls": {

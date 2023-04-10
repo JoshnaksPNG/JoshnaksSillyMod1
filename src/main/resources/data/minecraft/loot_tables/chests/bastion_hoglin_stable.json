@@ -354,6 +354,12 @@
           ],
           "name": "minecraft:crimson_roots"
         }
+      ,
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:fire_flower",
+          "weight": 30
+        }
       ],
       "rolls": {
         "type": "minecraft:uniform",

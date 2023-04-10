@@ -24,6 +24,7 @@
   "block.sillymod1.lego": "Lego",
   "block.sillymod1.cursed_door": "Cursed Door",
   "block.sillymod1.troll_grass": "Troll Grass",
+  "block.sillymod1.fire_flower_block": "Fire Flower (Block)",
 
   "item.sillymod1.gold_shield": "Gold Shield",
   "item.sillymod1.incorrect_parrot": "Incorrect Parrot Usage",
@@ -67,6 +68,7 @@
 
   "item.sillymod1.incompetent_spawn_egg": "Incompetent Creeper Spawn Egg",
   "item.sillymod1.trollface_spawn_egg": "Trollface Spawn Egg",
+  "item.sillymod1.tiny_mario_spawn_egg": "Tiny Mario Spawn Egg",
 
   "item.sillymod1.marioite_helmet": "Marioite Helmet",
   "item.sillymod1.marioite_chestplate": "Marioite Chestplate",

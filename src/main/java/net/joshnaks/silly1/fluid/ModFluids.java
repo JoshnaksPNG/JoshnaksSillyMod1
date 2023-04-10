@@ -43,7 +43,7 @@ public class ModFluids {
         GOOIGI_BUCKET = Registry.register(Registries.ITEM, new Identifier(SillyMod1.MOD_ID, "gooigi_bucket"),
                 new BucketItem(ModFluids.STILL_GOOIGI, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
-        ItemGroupEvents.modifyEntriesEvent(ModItemGroup.SILLY_TOOLS).register(entries -> entries.add(GOOIGI_BUCKET));
+        ItemGroupEvents.modifyEntriesEvent(ModItemGroup.UNFINISHED).register(entries -> entries.add(GOOIGI_BUCKET));
 
         STILL_MARINARA = Registry.register(Registries.FLUID,
                 new Identifier(SillyMod1.MOD_ID, "marinara_liquid"), new MarinaraFluid.Still());
@@ -57,6 +57,6 @@ public class ModFluids {
         MARINARA_BUCKET = Registry.register(Registries.ITEM, new Identifier(SillyMod1.MOD_ID, "marinara_bucket"),
                 new BucketItem(ModFluids.STILL_MARINARA, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
-        ItemGroupEvents.modifyEntriesEvent(ModItemGroup.SILLY_TOOLS).register(entries -> entries.add(MARINARA_BUCKET));
+        ItemGroupEvents.modifyEntriesEvent(ModItemGroup.UNFINISHED).register(entries -> entries.add(MARINARA_BUCKET));
     }
 }

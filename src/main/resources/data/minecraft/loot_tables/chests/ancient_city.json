@@ -398,6 +398,11 @@
           ],
           "name": "minecraft:coal",
           "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:fire_flower",
+          "weight": 30
         }
       ],
       "rolls": {

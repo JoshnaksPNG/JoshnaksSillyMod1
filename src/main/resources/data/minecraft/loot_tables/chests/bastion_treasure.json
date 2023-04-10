@@ -345,6 +345,11 @@
             }
           ],
           "name": "minecraft:magma_cream"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:fire_flower",
+          "weight": 30
         }
       ],
       "rolls": {

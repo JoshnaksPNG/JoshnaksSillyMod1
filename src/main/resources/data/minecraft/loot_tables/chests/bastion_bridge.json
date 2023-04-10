@@ -14,6 +14,11 @@
             }
           ],
           "name": "minecraft:lodestone"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sillymod1:fire_flower",
+          "weight": 30
         }
       ],
       "rolls": 1.0
