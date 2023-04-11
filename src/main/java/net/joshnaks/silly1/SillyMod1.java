@@ -40,8 +40,9 @@ public class SillyMod1 implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.HUSK_SLAVE, HuskSlaveEntity.createZombieAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.PIGLIN_SLAVE, PiglinSlaveEntity.createMobAttributes());
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CURSED_DOOR, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Fire_Flower_Block, RenderLayer.getCutout());
+		// Comment Out For Server
+		//BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CURSED_DOOR, RenderLayer.getCutout());
+		//BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.Fire_Flower_Block, RenderLayer.getCutout());
 
 
 		ModWorldGeneration.generateModWorldGen();
@@ -62,8 +63,9 @@ public class SillyMod1 implements ModInitializer {
 
 		ModFluids.register();
 
-		ModMessages.registerS2CPackets();
-		ModMessages.registerC2SPackets();
+		// Comment out for Server
+		//ModMessages.registerS2CPackets();
+		//ModMessages.registerC2SPackets();
 
 		GeckoLib.initialize();
 	}
